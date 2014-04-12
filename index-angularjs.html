@@ -64,7 +64,7 @@
                     <img ng-src="{{c.photo}}" alt="customer photo" class="customer-photo">
                     <div class="content">
                         <p class="commment-contnet" ng-bind="c.comment"></p>
-                        <p class="ratting-ctrl" data-ratting="c.ratting" data-max="5" readonly="true"></p>
+                        <p class="rating-ctrl" data-rating="c.rating" data-max="5" readonly="true"></p>
                     </div>
                 </div>
                 <div class="comment placeholder"></div>
@@ -72,8 +72,8 @@
         </div>
     </div>
     <form class="comment-window">
-        <p class="ratting-ctrl" data-ratting="customer_comment.ratting" data-max="5" data-placeholder="true" ng-class="{'show':showRatting}"></p>
-        <input type="text" class="comment-content" ng-model="customer_comment.comment" ng-focus="showRatting=true" />
+        <p class="rating-ctrl" data-rating="customer_comment.rating" data-max="5" data-placeholder="true" ng-class="{'show':showrating}"></p>
+        <input type="text" class="comment-content" ng-model="customer_comment.comment" ng-focus="showrating=true" />
         <input type="submit" class="submit" value="发表评论" ng-click="commentAdded()" />
     </form>
     <script src="js/angular.min.js"></script>

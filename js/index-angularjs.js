@@ -1,24 +1,24 @@
 var module = angular.module("miaomiao", []);
-module.directive('rattingCtrl', function() {
+module.directive('ratingCtrl', function() {
     return {
         restrict: 'AC',
         replace: true,
-        template: '<p class="ratting">' + '<span class="add-ratting" ng-show="placeholder">添加评分： </span>'+
+        template: '<p class="rating">' + '<span class="add-rating" ng-show="placeholder">添加评分： </span>'+
         	'<span ng-repeat="s in stars" class="star" ng-class="s" ng-click="toggle($index)"></span>' + '</p>',
         scope: {
-            ratting: '=',
+            rating: '=',
             placeholder: '=',
             max: '=',
             readonly: '@',
-            onRattingSelected: '&'
+            onratingSelected: '&'
         },
         link: function(scope, elem, attrs) {
             var updateStars = function() {
                 scope.stars = [];
                 for (var i = 0; i < scope.max; i++) {
                     scope.stars.push({
-                        'icon-star': i < scope.ratting,
-                        'icon-star-empty': i >= scope.ratting
+                        'icon-star': i < scope.rating,
+                        'icon-star-empty': i >= scope.rating
                     });
                 }
             };
@@ -27,13 +27,13 @@ module.directive('rattingCtrl', function() {
                 if (scope.readonly && scope.readonly === 'true') {
                     return;
                 }
-                scope.ratting = index + 1;
-                scope.onRattingSelected({
-                    ratting: index + 1
+                scope.rating = index + 1;
+                scope.onratingSelected({
+                    rating: index + 1
                 });
             };
 
-            scope.$watch('ratting', function(oldVal, newVal) {
+            scope.$watch('rating', function(oldVal, newVal) {
                 if (newVal) {
                     updateStars();
                 }
@@ -84,15 +84,15 @@ module.service("MiaoMiaoService", function($http) {
                 comments: [{
                     photo: "/holder.js/48x48",
                     comment: "不错，就是人比较多，要等",
-                    ratting: 4
+                    rating: 4
                 }, {
                     photo: "/holder.js/48x48",
                     comment: "位置很好找，店内环境也不错",
-                    ratting: 5
+                    rating: 5
                 }, {
                     photo: "/holder.js/48x48",
                     comment: "一般吧，灯光比较暗",
-                    ratting: 3
+                    rating: 3
                 }]
             };
             callback(data);
@@ -112,17 +112,17 @@ module.controller("MainCtrl", ["$scope", "MiaoMiaoService",
         })
 
         $scope.customer_comment = {
-            ratting: 1
+            rating: 1
         };
 
         $scope.addComment = function() {
-            $scope.showRatting = true;
+            $scope.showrating = true;
         }
 
         $scope.commentAdded = function() {
-            $scope.showRatting = false;
+            $scope.showrating = false;
             $scope.customer_comment = {
-                ratting: 1
+                rating: 1
             };
         }
     }

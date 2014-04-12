@@ -219,7 +219,7 @@ body {
 }
 /******
 
-    ADD COMMENT AND RATTING 
+    ADD COMMENT AND rating 
 
 *******/
 .comment-window {
@@ -231,23 +231,23 @@ body {
 
     background-color:#304969;
 }
-.comment-window .ratting {
+.comment-window .rating {
     line-height:60px;
 
     display:none;
 }
 
-.comment-window .ratting.show{
+.comment-window .rating.show{
     line-height:60px;
     display:block;
 }
 
-.comment-window .ratting .star{
+.comment-window .rating .star{
     cursor: pointer;
 }
 
 
-.comment-window .add-ratting{
+.comment-window .add-rating{
     color:#fff;
 }
 
