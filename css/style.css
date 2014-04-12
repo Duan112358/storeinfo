@@ -300,14 +300,20 @@ body {
     cursor:pointer;
 }
 
-.comment-window .icon-star-empty{
-    color:#fff;
+.star.icon-star-empty{
+    color:#9ff;
 }
 
-.comment-window .icon-star{
+.star.icon-star{
     color:#21b3e3;
 }
 
 .star{ 
     margin: 5px 5px 5px 0;
+}
+
+.star:before{
+    text-decoration: inherit;
+    display: inline-block;
+    content:"★  ";
 }
