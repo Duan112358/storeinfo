@@ -215,6 +215,7 @@ body {
 
 .comment.placeholder{
     height: 50px;
+    opacity: 0;
 }
 /******
 
