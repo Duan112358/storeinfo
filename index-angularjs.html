@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="miaomiao">
+
+<head>
+    <title>商户信息</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--[if IE 7]>
+      <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+    <![endif]-->
+</head>
+
+<body ng-controller="MainCtrl">
+    <div class="store-info">
+        <div class="photo">
+            <img ng-src="{{storeInfo.photo}}" alt="user photo">
+        </div>
+        <div class="description">
+            <p class="name" ng-bind="storeInfo.name"></p>
+            <div class="dividor"></div>
+            <p class="tel">
+            	<span>电话：</span><span ng-bind="storeInfo.tel"></span>
+            </p>
+            <p class="address" ng-bind="storeInfo.address"></p>
+        </div>
+    </div>
+    <div class="store-introduction">
+        <div class="description">
+            <p class="caption">店铺介绍</p>
+            <div class="dividor"></div>
+            <p class="content" ng-bind="storeIntroduction.description"></p>
+        </div>
+        <a class="check-position" ng-href="{{storeIntroduction.homepage}}">
+            <img src="img/btn_map.png" alt="check store position">
+        </a>
+
+        <a class="products" ng-href="javascript:void(0);">
+            <div class="product" ng-repeat="product in storeIntroduction.products">
+                <img ng-src="{{product.photo}}" alt="product image">
+                <p class="title" ng-bind="product.title"></p>
+                <p class="price" ng-bind="product.price"></p>
+            </div>
+            <div class="view-all">
+                <img src="img/icon_right_arrow.png" alt="view all products">
+            </div>
+        </a>
+
+        <p class="statistics">
+            共有
+            <span class="customers-count" ng-bind="storeIntroduction.customers_count"></span>名顾客来过，
+            <span class="customer-comments-count" ng-bind="storeIntroduction.customer_comments_count"></span>人留下了点评
+        </p>
+
+        <div class="description">
+            <p class="caption">顾客点评</p>
+            <div class="dividor"></div>
+            <div class="comments">
+                <div class="comment" ng-repeat="c in storeIntroduction.comments">
+                    <img ng-src="{{c.photo}}" alt="customer photo" class="customer-photo">
+                    <div class="content">
+                        <p class="commment-contnet" ng-bind="c.comment"></p>
+                        <p class="ratting-ctrl" data-ratting="c.ratting" data-max="5" readonly="true"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form class="comment-window">
+    	<p class="ratting-ctrl" data-ratting="customer_comment.ratting" data-max="5" data-placeholder="true" ng-class="{'show':showRatting}"></p>
+        <input type="text" class="comment-content" ng-model="customer_comment.comment" ng-focus="showRatting=true"/>
+        <input type="submit" class="submit" value="发表评论" ng-click="commentAdded()"/>
+    </form>
+	<script src="js/angular.min.js"></script>
+    <script src="js/holder.js"></script>
+    <script src="js/index-angularjs.js"></script>
+</body>
+
+</html>

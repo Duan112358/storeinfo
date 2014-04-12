@@ -1,0 +1,312 @@
+/***
+
+Coding guideline reference: http://codeguider.bootcss.com;
+CSS-Declaration-Order: 
+    1. Positioning
+    2. Box model
+    3. Typographic
+    4. Visual
+    5. Misc
+
+Author: duanhong@qfpay.com;
+Date:   2014/04/12;
+
+***/
+
+body {
+    background-color:#eefaff;
+}
+
+
+/***** 
+
+    STORE CONTACT INFO  
+
+*****/
+.store-info {
+    float:left;
+
+    height:114px;
+    width:100%;
+
+    background:url(../img/head_bg.jpg) repeat-x;
+}
+.store-info .photo {
+    float:left;
+}
+.store-info .photo img {
+    display: inline-block;
+
+    margin:18px 10px 18px 20px;
+
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+.store-info .description {
+    float:left;
+}
+.store-info .dividor {
+    height:2px;
+
+    background-color:#d1f6ff;
+}
+.store-info .name {
+    line-height:51px;
+    font-size:24px;
+    color:#fff;
+}
+.store-info .contact {
+    float:right;
+
+    height:51px;
+}
+.store-info .tel {
+    line-height:26px;   
+    font-style:italic;
+    font-size:12px;
+    color:#d1f6ff;
+}
+.store-info .address {
+    margin-bottom:13px;
+
+    font-size:14px;
+    color:#d1f6ff;
+}
+
+/**** 
+
+    STORE INTRODUCTION INFO 
+
+***/
+.store-introduction {
+    position:fixed;
+    left:0;
+    right:0;
+    top:104px;
+
+    margin:0 10px;
+}
+
+.store-introduction .description {
+    background-color:#fff;
+    border-radius:3px;
+    box-shadow:0 2px 2px rgba(0, 0, 0, 0.1);
+}
+.store-introduction .caption {
+    padding:0 10px;
+    
+    line-height:24px;
+    color:#21b3e3;
+    font-size:12px;
+    font-style:italic;
+}
+.store-introduction .dividor {
+    height: 1px;
+
+    background-color:#21b3e3;
+}
+.store-introduction .content {
+    padding: 10px;
+
+    line-height:24px;
+    font-size:14px;
+    color:#3f4245;
+}
+
+/****  STORE LOCATION REDIRECTION VIEW *****/
+.store-introduction .check-position {
+    display:inline-block;
+    margin:10px 0;
+}
+.store-introduction .check-position img {
+    width:100%;
+}
+
+
+/**** 
+
+    STORE PRODUCTS DISPLAY 
+
+***/
+.store-introduction .products {
+    display:block;
+    float: left;
+    width:100%;
+    
+    margin-bottom: 10px;
+
+    
+    background-color:#fff;
+    border-radius:3px;
+    box-shadow:0 2px 2px rgba(0, 0, 0, 0.1);
+}
+.store-introduction .product {
+    display:relative;
+    float:left;
+    width: 16%;
+    margin:5px 5px 5px 0px;
+
+    text-align:center;
+}
+.store-introduction .product .price {
+    color:#21b3e3;
+    font-size:12px;
+}
+.store-introduction .product .title {
+    position:relative;
+    top:-20px;
+
+    color:#fff;
+    font-size:12px;
+}
+/* TODO: view-all image height should be redifined*/
+ .store-introduction .view-all {
+    float:right;
+    margin: 10px 25px 10px 10px;
+}
+
+/****    CUSTOMERS STATISTICS DATA     *****/
+.store-introduction .statistics {
+    margin-top:10px;
+
+    line-height:40px;
+    color:#21b3e3;
+    text-align:center;
+    font-size:16px;
+}
+.store-introduction .customers-count, 
+.store-introduction .customer-comments-count {
+    color:#304969;
+    font-size:16px;
+}
+
+
+/****
+
+    CUSTOMER COMMENTS      
+
+****/
+.store-introduction .comment {
+    float:left;
+    width:100%;
+    height:100%;
+
+    line-height:68px;
+    
+    border-bottom: 1px solid #d3f0f9;
+    background-color:#eefaff;
+}
+.comment .customer-photo {
+    float:left;
+    margin: 10px 14px 10px 0px;
+
+    border-radius:50%;
+}
+.comment .content {
+    float:left;
+    height:100%;
+
+    font-size:18px;
+}
+.comment .icon-star {
+    color:#21b3e3;
+}
+.comment .icon-star-empty {
+    color:#21b3ff;
+}
+
+
+/******
+
+    ADD COMMENT AND RATTING 
+
+*******/
+.comment-window {
+    position:fixed;
+    bottom:0;
+
+    padding:10px;
+    width:100%;
+
+    background-color:#304969;
+}
+.comment-window .ratting {
+    line-height:60px;
+
+    display:none;
+}
+
+.comment-window .ratting.show{
+    line-height:60px;
+    display:block;
+}
+
+.comment-window .ratting .star{
+    cursor: pointer;
+}
+
+
+.comment-window .add-ratting{
+    color:#fff;
+}
+
+.comment-window .comment-content {
+    display: block;
+    float:left;
+
+    width: 70%;
+    height: 34px;
+    padding-left:10px;
+
+
+    line-height: 1.42857143;
+    font-size: 16px;
+    color: #21b3e3;
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    background-image: none;
+}
+.comment-window .submit {
+    display:block;
+    float:left;
+
+    width:21%;
+    height:34px;
+    margin: 0 2%;
+
+    line-height: 1.42857143;
+    font-size:16px;
+    color:#fff;
+
+    background-color:#21b3e3;
+    border-radius:3px;
+    border: 1px solid transparent;
+    cursor:pointer;
+}
+
+.comment-window .submit:active:focus, 
+.comment-window .submit:focus {
+    color: #fff;
+
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+
+    background-color: #428bca;
+    border-color: #357ebd;
+    cursor:pointer;
+}
+
+.comment-window .icon-star-empty{
+    color:#fff;
+}
+
+.comment-window .icon-star{
+    color:#21b3e3;
+}
+
+.star{ 
+    margin: 5px 5px 5px 0;
+}
