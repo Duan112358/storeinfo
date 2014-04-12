@@ -1,0 +1,4 @@
+storeinfo
+=========
+
+store page design
