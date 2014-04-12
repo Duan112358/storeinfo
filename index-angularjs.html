@@ -19,11 +19,12 @@
         <div class="photo">
             <img ng-src="{{storeInfo.photo}}" alt="user photo">
         </div>
-        <div class="description">
+        <div class="contact-info">
             <p class="name" ng-bind="storeInfo.name"></p>
             <div class="dividor"></div>
             <p class="tel">
-            	<span>电话：</span><span ng-bind="storeInfo.tel"></span>
+                <span>电话：</span>
+                <span ng-bind="storeInfo.tel"></span>
             </p>
             <p class="address" ng-bind="storeInfo.address"></p>
         </div>
@@ -66,15 +67,16 @@
                         <p class="ratting-ctrl" data-ratting="c.ratting" data-max="5" readonly="true"></p>
                     </div>
                 </div>
+                <div class="comment placeholder"></div>
             </div>
         </div>
     </div>
     <form class="comment-window">
-    	<p class="ratting-ctrl" data-ratting="customer_comment.ratting" data-max="5" data-placeholder="true" ng-class="{'show':showRatting}"></p>
-        <input type="text" class="comment-content" ng-model="customer_comment.comment" ng-focus="showRatting=true"/>
-        <input type="submit" class="submit" value="发表评论" ng-click="commentAdded()"/>
+        <p class="ratting-ctrl" data-ratting="customer_comment.ratting" data-max="5" data-placeholder="true" ng-class="{'show':showRatting}"></p>
+        <input type="text" class="comment-content" ng-model="customer_comment.comment" ng-focus="showRatting=true" />
+        <input type="submit" class="submit" value="发表评论" ng-click="commentAdded()" />
     </form>
-	<script src="js/angular.min.js"></script>
+    <script src="js/angular.min.js"></script>
     <script src="js/holder.js"></script>
     <script src="js/index-angularjs.js"></script>
 </body>

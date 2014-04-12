@@ -42,7 +42,7 @@ body {
     border: 2px solid #fff;
     border-radius: 50%;
 }
-.store-info .description {
+.store-info .contact-info {
     float:left;
 }
 .store-info .dividor {
@@ -55,11 +55,7 @@ body {
     font-size:24px;
     color:#fff;
 }
-.store-info .contact {
-    float:right;
 
-    height:51px;
-}
 .store-info .tel {
     line-height:26px;   
     font-style:italic;
@@ -79,16 +75,18 @@ body {
 
 ***/
 .store-introduction {
-    position:fixed;
-    left:0;
-    right:0;
-    top:104px;
+    position:relative;
+    top:-10px;
 
+    padding-top:114px;
     margin:0 10px;
+    height:100%;
 }
 
 .store-introduction .description {
-    background-color:#fff;
+    height:100%;
+
+    background-color: #fff;
     border-radius:3px;
     box-shadow:0 2px 2px rgba(0, 0, 0, 0.1);
 }
@@ -215,7 +213,9 @@ body {
     color:#21b3ff;
 }
 
-
+.comment.placeholder{
+    height: 50px;
+}
 /******
 
     ADD COMMENT AND RATTING 
