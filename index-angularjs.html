@@ -27,7 +27,7 @@
     </div>
     <div class="store-introduction">
         <div class="description">
-            <p class="caption">店铺介绍</p>
+            <p class="introduce">店铺介绍</p>
             <div class="dividor"></div>
             <p class="content" ng-bind="storeIntroduction.description"></p>
         </div>
@@ -52,8 +52,8 @@
             <span class="customer-comments-count" ng-bind="storeIntroduction.customer_comments_count"></span>人留下了点评
         </p>
 
-        <div class="description">
-            <p class="caption">顾客点评</p>
+        <div class="description no-shadow">
+            <p class="customer-comment">顾客点评</p>
             <div class="dividor"></div>
             <div class="comments">
                 <div class="comment" ng-repeat="c in storeIntroduction.comments">
