@@ -4,10 +4,11 @@ module.directive('ratingCtrl', function() {
         restrict: 'AC',
         replace: true,
         template: '<p class="rating">' + '<span class="add-rating" ng-show="placeholder">添加评分： </span>'+
-        	'<span ng-repeat="s in stars" class="star" ng-class="s" ng-click="toggle($index)"></span>' + '</p>',
+            '<span ng-repeat="s in stars" class="star" ng-class="s" ng-click="toggle($index)"></span>' + '</p>',
         scope: {
             rating: '=',
             placeholder: '=',
+            iconLg:'=',
             max: '=',
             readonly: '@',
             onratingSelected: '&'
@@ -15,11 +16,11 @@ module.directive('ratingCtrl', function() {
         link: function(scope, elem, attrs) {
             var updateStars = function() {
                 scope.stars = [];
+
                 for (var i = 0; i < scope.max; i++) {
-                    scope.stars.push({
-                        'icon-star': i < scope.rating,
-                        'icon-star-empty': i >= scope.rating
-                    });
+                    var classVal = scope.iconLg ? {'icon-star star icon-lg': i < scope.rating, 'icon-star-empty star icon-lg': i >= scope.rating } 
+                    : {'icon-star star': i < scope.rating , 'icon-star-empty star': i >= scope.rating };
+                    scope.stars.push(classVal);
                 }
             };
 
@@ -43,7 +44,7 @@ module.directive('ratingCtrl', function() {
 });
 module.service("MiaoMiaoService", function($http) {
     return {
-    	// fake api access
+        // fake api access
         getStoreInfo: function(params, callback) {
             var data = {
                 photo: '/holder.js/64x64',

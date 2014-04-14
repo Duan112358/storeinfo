@@ -41,9 +41,7 @@
                 <p class="title" ng-bind="product.title"></p>
                 <p class="price" ng-bind="product.price"></p>
             </div>
-            <div class="view-all">
-                <img src="img/icon_right_arrow.png" alt="view all products">
-            </div>
+            <img src="img/icon_right_arrow.png" alt="view all products" class="view-all">
         </a>
 
         <p class="statistics">
@@ -68,7 +66,7 @@
         </div>
     </div>
     <form class="comment-window">
-        <p class="rating-ctrl" data-rating="customer_comment.rating" data-max="5" data-placeholder="true" ng-class="{'show':showrating}"></p>
+        <p class="rating-ctrl" data-rating="customer_comment.rating" data-icon-lg="true" data-max="5" data-placeholder="true" ng-class="{'show':showrating}"></p>
         <input type="text" class="comment-content" ng-model="customer_comment.comment" ng-focus="showrating=true" />
         <input type="submit" class="submit" value="发表评论" ng-click="commentAdded()" />
     </form>

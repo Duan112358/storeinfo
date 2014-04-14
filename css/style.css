@@ -24,7 +24,8 @@ Date:   2014/04/12;
     float:left;
     height:114px;
     width:100%;
-    background:url(../img/head_bg.jpg) repeat-x;
+    background-image:url(../img/head_bg.jpg);
+    background-size:100%;
 }
 .store-info .photo {
     float:left;
@@ -34,6 +35,8 @@ Date:   2014/04/12;
     margin:18px 10px 18px 20px;
     border: 2px solid #fff;
     border-radius: 50%;
+    width:64px;
+    height:64px;
 }
 .store-info .contact-info {
     float:left;
@@ -108,9 +111,13 @@ Date:   2014/04/12;
  .store-introduction .check-position {
     display:inline-block;
     margin:10px 0;
+    width: 100%;
 }
 .store-introduction .check-position img {
-    width:100%;
+    width:101%;
+    height:48px;
+    margin-left: -2px;
+    margin-right: -2px;
 }
 /**** 
 
@@ -127,28 +134,38 @@ Date:   2014/04/12;
     box-shadow:0 2px 2px rgba(0, 0, 0, 0.1);
 }
 .store-introduction .product {
-    display:relative;
     float:left;
     width: 16%;
     margin:5px 0 0 5px;
     text-align:center;
 }
+
+.store-introduction .product img{
+    width: 50px;
+    height:50px;
+}
+
 .store-introduction .product .price {
     color:#21b3e3;
+    margin-top: -16px;
     font-size:12px;
+    line-height: 24px;
 }
 .store-introduction .product .title {
-    position:relative;
-    top:-15px;
-    margin-bottom: -10px;
+    position: relative;
+    top:-18px;
+    line-height: 12px;
     color:#fff;
     font-size:12px;
 }
 /* TODO: view-all image height should be redifined*/
  .store-introduction .view-all {
     float:right;
-    padding: 10px 5px 0 0;
+    width: 8px;
+    height: 19px;
+    margin: 20px 15px;
 }
+
 /****    CUSTOMERS STATISTICS DATA     *****/
  .store-introduction .statistics {
     margin-top:10px;
@@ -181,6 +198,8 @@ Date:   2014/04/12;
     float:left;
     margin: 10px 14px 10px 0px;
     border-radius:50%;
+    width: 48px;
+    height:48px;
 }
 .comment .content {
     float:left;
@@ -215,11 +234,9 @@ Date:   2014/04/12;
     background-color:#304969;
 }
 .comment-window .rating {
-    line-height:60px;
     display:none;
 }
 .comment-window .rating.show {
-    line-height:60px;
     display:block;
 }
 .comment-window .rating .star {
@@ -227,28 +244,28 @@ Date:   2014/04/12;
 }
 .comment-window .add-rating {
     color:#fff;
+    line-height: 60px;
 }
 .comment-window .comment-content {
     display: block;
     float:left;
     width: 70%;
-    height: 34px;
+    height: 30px;
     padding-left:10px;
-    line-height: 1.42857143;
+    line-height: 1.5;
     font-size: 16px;
     color: #21b3e3;
     border: 1px solid #ccc;
     border-radius: 3px;
     background-color: #fff;
-    background-image: none;
 }
 .comment-window .submit {
     display:block;
     float:left;
-    width:21%;
-    height:34px;
+    width:20%;
+    height:32px;
     margin: 0 2%;
-    line-height: 1.42857143;
+    line-height: 1.5;
     font-size:16px;
     color:#fff;
     background-color:#21b3e3;
@@ -259,14 +276,15 @@ Date:   2014/04/12;
 .comment-window .submit:active:focus, .comment-window .submit:focus {
     color: #fff;
     outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
+    outline: 2px auto -webkit-focus-ring-color;
     outline-offset: -2px;
     background-color: #428bca;
     border-color: #357ebd;
     cursor:pointer;
 }
+
 .star.icon-star-empty {
-    color:#9ff;
+    color:#d3f0f9;
 }
 .star.icon-star {
     color:#21b3e3;
@@ -274,6 +292,12 @@ Date:   2014/04/12;
 .star {
     margin: 5px 5px 5px 0;
 }
+
+.star.icon-lg{
+    font-size:28px;
+    padding: 5px;
+}
+
 .star:before {
     text-decoration: inherit;
     display: inline-block;
