@@ -205,7 +205,7 @@ Date:   2014/04/12;
     float:left;
     height:100%;
     font-size:18px;
-    max-width: calc(100% - 80px);
+    max-width: calc(100% - 90px);
     text-overflow: ellipsis;
 }
 .comment .icon-star {
@@ -257,7 +257,7 @@ Date:   2014/04/12;
 }
 .comment-window .submit {
     width:100px;
-    height:34px;
+    height:32px;
     margin:0 8px;
     line-height: 1.5;
     font-size:16px;
